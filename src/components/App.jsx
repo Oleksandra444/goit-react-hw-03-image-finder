@@ -52,19 +52,20 @@ export class App extends Component {
   };
   
   render() {
-    const { isLoading, error, totalHits, page, query } = this.state;
+    const { isLoading, error, totalHits, page, query, images } = this.state;
     const totalPage = Math.ceil(totalHits / 12);
+
     return (
       <div className={css.app }>
-        <SearchBar onSubmit={ this.querySubmit} />
-        {totalHits === 0 ? <div className={css.message}> Sorry! There are no images {query}</div>:<ImageGallery imageList={this.state.images} /> }
-        {totalPage>page && <ButtonLoadMore onClick={this.loadMore} /> }
-        {isLoading && <Loader />}
-        {error && <div className={ css.error}> OOPS! TRY AGAIN. SOMETHING GONE WRONG</div>}
-
-
+        <SearchBar onSubmit={this.querySubmit} />
         
+        {totalHits === 0 ? <div className={css.message}> Sorry! There are no images {query}</div> : <ImageGallery imageList={images} />}
+        
+        {totalPage > page && <ButtonLoadMore onClick={this.loadMore} />}
+        
+        {isLoading && <Loader />}
 
+        {error && <div className={ css.error}> OOPS! TRY AGAIN. SOMETHING GONE WRONG</div>}
 
 
       </div>

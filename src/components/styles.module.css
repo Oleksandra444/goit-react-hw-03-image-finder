@@ -91,7 +91,7 @@ img {
   opacity: 1;
 }
 
-/* .searchFormButtonLabel {
+.searchFormButtonLabel {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -101,7 +101,7 @@ img {
   white-space: nowrap;
   clip-path: inset(50%);
   border: 0;
-} */
+}
 
 .searchFormInput {
   display: inline-block;
@@ -160,7 +160,7 @@ img {
  * Стили компонента Modal
  */
 
-.Overlay {
+/* .Overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -176,7 +176,7 @@ img {
 .Modal {
   max-width: calc(100vw - 48px);
   max-height: calc(100vh - 24px);
-}
+} */
 
 /*
 * Стили компонента Button (Load more)
@@ -212,13 +212,9 @@ img {
 .loaderWrapper {
 
   display: flex;
-    /* align-items: center; */
     justify-content: center;
     height: 100vh;
-    /* position: absolute;
-    z-index: 9999;
-    margin: 0;
-    padding: 0; */
+    
 }
 
 .error {
